@@ -1,7 +1,4 @@
-import { Component, Inject } from '@angular/core';
-import { CommonService } from './common/common.service';
-import { COLOF_CONFIG_TOKEN } from './config';
-import { ColorConfig } from './types/color-config';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',

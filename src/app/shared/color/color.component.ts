@@ -1,13 +1,13 @@
 import { Component, Inject } from '@angular/core';
-import { CommonService } from 'src/app/common/common.service';
-import { COLOF_CONFIG_TOKEN } from 'src/app/config';
+import { ColorService } from 'src/app/shared/color/color.service';
+import { COLOR_CONFIG_TOKEN } from 'src/app/config';
 import { ColorConfig } from 'src/app/types/color-config';
 
 @Component({
   templateUrl: './color.component.html',
-  styleUrls: ['./color.component.sass']
+  styleUrls: ['./color.component.sass'],
 })
-export abstract class ColorComponent {
+export class ColorComponent {
   public get bgColor(): string {
     return this.config.color;
   }
@@ -19,9 +19,9 @@ export abstract class ColorComponent {
   }
 
   constructor(
-    private commonService: CommonService,
-    @Inject(COLOF_CONFIG_TOKEN) private config: ColorConfig
+    private colorService: ColorService,
+    @Inject(COLOR_CONFIG_TOKEN) private config: ColorConfig
   ) {
-    this.commonService.init();
+    this.colorService.init();
   }
 }

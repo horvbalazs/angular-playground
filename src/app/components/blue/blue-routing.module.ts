@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BlueComponent } from './blue.component';
+import { ColorComponent } from 'src/app/shared/color/color.component';
 
-const routes: Routes = [{ path: '', component: BlueComponent }];
+const routes: Routes = [{ path: '', component: ColorComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
